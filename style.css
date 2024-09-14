@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Content */
+body {
+  background-color: #180161;
+  min-height: 100vh;
+}
+
+/* header */
+nav {
+  display: flex;
+  width: 100vw;
+  gap: 10px;
+  padding: 10px 20px 10px 25px;
+  position: fixed;
+  background-color: #4f1787;
+}
+
+nav .svg {
+  width: 40px;
+}
+nav .svg:hover {
+  transform: skewY(30deg) scale(1.2);
+  transition-duration: 300ms;
+}
+
+nav .des {
+  display: flex;
+  width: 100xw;
+  gap: 10px;
+  padding: 10px 20px 10px 0px;
+  position: fixed;
+  width: 100%;
+  margin-left: 60px;
+}
+
+nav .des a {
+  color: #eb3678;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0 0 20px #eb3678;
+}
+
+nav .des a:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px #ff5100;
+  font-weight: 800;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+aside {
+  width: 80%;
+  margin: 90px auto 0;
+  display: flex;
+  flex-direction: column;
+  color: #fb773c;
+}
+aside .img {
+  background-image: url("195.jpg");
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  border-radius: 24px;
+}
+
+aside h1 {
+  display: block;
+  margin: 30px auto;
+  font-size: 32px;
+  background-color: #fb783c3d;
+  padding: 20px 0;
+  color: #eb3678;
+  font-weight: 700;
+  display: block;
+  width: 50%;
+  text-align: center;
+  border-radius: 100%;
+  text-shadow: 0 0 20px #eb3678;
+}
+
+aside h1:hover {
+  width: 100%;
+  border-radius: 20px;
+  transition: 500ms;
+}
+
+main #content article {
+  padding: 20px 20px;
+  font-size: 18px;
+  background-color: #493785;
+  color: #eb3678;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+#content #home {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#content article h1 {
+  text-align: center;
+  padding: 10px 0 15px 0;
+  font-size: 24px;
+  text-shadow: 0 0 20px #180161;
+  color: #180161;
+  font-weight: 700;
+}
+
+/* footer */
+footer {
+  background-color: #4f1787;
+  padding: 50px;
+  text-align: center;
+  margin-top: 50px;
+}
+/* Content end*/
+
+/* media query */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  nav .des a {
+    font-size: 18px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  nav .des a {
+    font-size: 20px;
+  }
+  footer {
+    font-size: 16px;
+  }
+  main #content article {
+    padding: 20px 50px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+  }
+  main #content {
+    width: 70%;
+    margin: 90px 0 0 20px;
+  }
+  main #content article {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 24px black;
+  }
+  main aside {
+    width: 25%;
+  }
+  footer {
+    font-size: 20px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* nav {
+    height: 40px;
+  } */
+
+  nav .svg {
+    width: 50px;
+  }
+
+  nav .des a {
+    font-size: 24px;
+  }
+}
